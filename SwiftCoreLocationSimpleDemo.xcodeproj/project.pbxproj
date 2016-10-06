@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF1101531DA69DE6005D45B4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF1101521DA69DE6005D45B4 /* CoreLocation.framework */; };
+		DF1101551DA6B71D005D45B4 /* UserLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1101541DA6B71D005D45B4 /* UserLocationViewController.swift */; };
 		DF3E86981DA6453500C3450D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3E86971DA6453500C3450D /* AppDelegate.swift */; };
 		DF3E869A1DA6453500C3450D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3E86991DA6453500C3450D /* ViewController.swift */; };
 		DF3E869D1DA6453500C3450D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF3E869B1DA6453500C3450D /* Main.storyboard */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DF1101521DA69DE6005D45B4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		DF1101541DA6B71D005D45B4 /* UserLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLocationViewController.swift; sourceTree = "<group>"; };
 		DF3E86941DA6453500C3450D /* SwiftCoreLocationSimpleDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftCoreLocationSimpleDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF3E86971DA6453500C3450D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DF3E86991DA6453500C3450D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF1101531DA69DE6005D45B4 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +43,7 @@
 		DF3E868B1DA6453500C3450D = {
 			isa = PBXGroup;
 			children = (
+				DF1101521DA69DE6005D45B4 /* CoreLocation.framework */,
 				DF3E86961DA6453500C3450D /* SwiftCoreLocationSimpleDemo */,
 				DF3E86951DA6453500C3450D /* Products */,
 			);
@@ -60,6 +66,7 @@
 				DF3E869E1DA6453500C3450D /* Assets.xcassets */,
 				DF3E86A01DA6453500C3450D /* LaunchScreen.storyboard */,
 				DF3E86A31DA6453500C3450D /* Info.plist */,
+				DF1101541DA6B71D005D45B4 /* UserLocationViewController.swift */,
 			);
 			path = SwiftCoreLocationSimpleDemo;
 			sourceTree = "<group>";
@@ -138,6 +145,7 @@
 			files = (
 				DF3E869A1DA6453500C3450D /* ViewController.swift in Sources */,
 				DF3E86981DA6453500C3450D /* AppDelegate.swift in Sources */,
+				DF1101551DA6B71D005D45B4 /* UserLocationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

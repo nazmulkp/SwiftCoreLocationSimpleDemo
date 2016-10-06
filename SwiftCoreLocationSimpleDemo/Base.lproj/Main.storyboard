@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -20,23 +21,70 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Gla-Xp-kCp">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tz1-jk-wys">
+                                <rect key="frame" x="20" y="442" width="280" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Find User Location?">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="7UQ-50-Yjc" kind="show" id="ROg-pT-J3Z"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Gla-Xp-kCp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Aj2-XA-xFK"/>
-                            <constraint firstAttribute="trailing" secondItem="Gla-Xp-kCp" secondAttribute="trailing" id="DYM-5e-pzl"/>
-                            <constraint firstItem="Gla-Xp-kCp" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Hso-xM-lN8"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Gla-Xp-kCp" secondAttribute="bottom" id="zbQ-5s-kOm"/>
+                            <constraint firstItem="Gla-Xp-kCp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="2K6-VN-Ntc"/>
+                            <constraint firstItem="Gla-Xp-kCp" firstAttribute="centerX" secondItem="tz1-jk-wys" secondAttribute="centerX" id="87d-Dn-wra"/>
+                            <constraint firstItem="Gla-Xp-kCp" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="JLk-qL-oAn"/>
+                            <constraint firstItem="Gla-Xp-kCp" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="acs-84-eCc"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="tz1-jk-wys" secondAttribute="bottom" constant="8" symbolic="YES" id="d6P-zN-ldg"/>
+                            <constraint firstItem="tz1-jk-wys" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="xQh-HK-mMv"/>
+                            <constraint firstAttribute="trailing" secondItem="Gla-Xp-kCp" secondAttribute="trailing" id="zfX-DU-oYc"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
+                        <outlet property="_whareBtnView" destination="tz1-jk-wys" id="2Bt-Wq-F4Z"/>
                         <outlet property="locationMapView" destination="Gla-Xp-kCp" id="KG6-Qa-iKu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="237" y="256"/>
+        </scene>
+        <!--User Location View Controller-->
+        <scene sceneID="jvZ-np-asj">
+            <objects>
+                <viewController id="7UQ-50-Yjc" customClass="UserLocationViewController" customModule="SwiftCoreLocationSimpleDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ycc-ny-UbJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="7Zv-HR-jiE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xzF-Gg-jmZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ghw-m8-NTC">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ghw-m8-NTC" firstAttribute="leading" secondItem="xzF-Gg-jmZ" secondAttribute="leading" id="TR7-s7-ru4"/>
+                            <constraint firstItem="ghw-m8-NTC" firstAttribute="top" secondItem="xzF-Gg-jmZ" secondAttribute="top" id="aXg-RP-PcJ"/>
+                            <constraint firstAttribute="trailing" secondItem="ghw-m8-NTC" secondAttribute="trailing" id="gj0-Bo-vu9"/>
+                            <constraint firstItem="7Zv-HR-jiE" firstAttribute="top" secondItem="ghw-m8-NTC" secondAttribute="bottom" id="rzM-1d-Sdn"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="map" destination="ghw-m8-NTC" id="B0V-ci-qFj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a5I-cb-NhX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="652" y="256"/>
         </scene>
     </scenes>
 </document>

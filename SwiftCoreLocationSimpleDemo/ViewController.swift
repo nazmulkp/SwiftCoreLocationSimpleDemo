@@ -9,10 +9,16 @@
 import UIKit
 import MapKit
 
-class ViewController: UIViewController {
+
+class ViewController: UIViewController{
     
     @IBOutlet  var locationMapView: MKMapView!
+    
 
+    @IBOutlet weak var _whareBtnView: UIButton!
+    
+   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Cox's Bazar Beach Cox's Bazar Beach, located at Cox's Bazar, Bangladesh, is the longest unbroken sea beach in the world, running 120 kilometres. It is the top tourist destination of Bangladesh
@@ -40,15 +46,14 @@ class ViewController: UIViewController {
         //to display the annotation in the map view specific  point
         locationMapView.addAnnotation(annotation)
         
-    }
+        //adding button on the mapkitView
+        locationMapView.addSubview(_whareBtnView)
+      }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    
-
-
 }
 
