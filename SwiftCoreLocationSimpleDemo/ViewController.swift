@@ -31,7 +31,14 @@ class ViewController: UIViewController {
         // to display in the map view
         locationMapView.setRegion(mkCoordinateRegion, animated: true)
         
-       
+        //defines a concrete annotation object located at a specified point
+        let annotation = MKPointAnnotation()
+        annotation.title = "Cox's Bazar Beach"
+        annotation.subtitle = "It is the longest unbroken sea beach in the world. It is the top tourist destination of Bangladesh"
+        //The coordinate point of the annotation, specified as a latitude and longitude
+        annotation.coordinate = clLocationCoordinate2D
+        //to display the annotation in the map view specific  point
+        locationMapView.addAnnotation(annotation)
         
     }
 
